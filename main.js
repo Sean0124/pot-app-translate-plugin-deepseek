@@ -4,7 +4,7 @@ async function translate(text, from, to, options) {
     
     let { apiKey, model = "deepseek-chat", prompt = "Translate into ${to}:\n${text}", wordCount = "2" } = config;
     
-    let inputWordCount = String(text).length;
+    let inputWordCount = String(text).trim().split(/\s+/).length;
     if (inputWordCount < wordCount) {
         return "输入的文本字数小于" + wordCount + "个字，未启用翻译。";
     }
