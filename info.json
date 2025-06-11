@@ -2,7 +2,7 @@
   "id": "plugin.com.sean.deepseek",
   "plugin_type": "translate",
   "icon": "deepseek.svg",
-  "display": "deepseek",
+  "display": "deepseek-ai",
   "homepage": "https://github.com/Sean0124/pot-app-translate-plugin-deepseek.git",
   "needs": [
     {
