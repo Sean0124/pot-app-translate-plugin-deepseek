@@ -25,7 +25,7 @@ async function translate(text, from, to, options) {
             },
             {
                 "role": "user",
-                "content": `Translate into ${to}:\n${text}`
+                "content": prompt.replace("${to}", to).replace("${text}", text)
             }
         ],
         temperature: 0.1,
