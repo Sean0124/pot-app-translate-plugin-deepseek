@@ -2,8 +2,12 @@ async function translate(text, from, to, options) {
     const { config, utils } = options;
     const { tauriFetch: fetch } = utils;
     
-    let { apiKey, model = "deepseek-chat" } = config;
+    let { apiKey, model = "deepseek-chat", prompt = "Translate into ${to}:\n${text}", wordCount = "2" } = config;
     
+    let inputWordCount = String(text).length;
+    if (inputWordCount < wordCount) {
+        return "输入的文本字数小于" + wordCount + "个字，未启用翻译。";
+    }
     // 设置默认请求路径
     const requestPath = "https://api.deepseek.com/chat/completions";
     

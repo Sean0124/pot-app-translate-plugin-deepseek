@@ -1,9 +1,9 @@
 {
-  "id": "plugin.com.TzuLao.deepseek",
+  "id": "plugin.com.sean.deepseek",
   "plugin_type": "translate",
   "icon": "deepseek.svg",
   "display": "deepseek",
-  "homepage": "https://github.com/tzulao55/pot-app-translate-plugin-deepseek",
+  "homepage": "https://github.com/Sean0124/pot-app-translate-plugin-deepseek.git",
   "needs": [
     {
       "key": "model",
@@ -19,6 +19,18 @@
       "key": "apiKey",
       "display": "API密钥",
       "type": "input"
+    },
+    {
+      "key": "promte",
+      "display": "提示词",
+      "type": "input",
+      "default": "你是一个专业的翻译者，请将我提供的文本翻译成中文。"
+    },
+    {
+      "key": "wordCount",
+      "display": "根据输入单词数,判断是否进行翻译",
+      "type": "input",
+      "default": "2"
     }
   ],
   "language": {
